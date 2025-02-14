@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>同意ボタンページ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .agree-button, .disagree-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .agree-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .agree-button:hover {
+            background-color: #45a049;
+        }
+        .disagree-button {
+            background-color: #f44336;
+            color: white;
+        }
+        .disagree-button:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>利用規約に同意しますか？</h1>
+        <img src="your-image.jpg" alt="image">
+        
+        <div class="button-container">
+            <button class="agree-button" onclick="redirectToMainPage()">同意する</button>
+            <button class="disagree-button" onclick="redirectToDisagreePage()">同意しない</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectToMainPage() {
+            // 同意後にメインページにリダイレクト
+            window.location.href = "https://nandemo-shop-code.vercel.app"; // ここを上記の「NANDEMO-SHOP」のURLに変更
+        }
+
+        function redirectToDisagreePage() {
+            // 同意しない場合は別のページにリダイレクト
+            window.location.href = "https://www.google.co.jp/"; // 同意しない場合のURLに変更
+        }
+    </script>
+</body>
+</html>
